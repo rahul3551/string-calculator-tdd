@@ -12,3 +12,6 @@ def test_two_numbers_comma_separated():
 
 def test_new_line_separated_numbers():
     assert add("1\n2,3") == 6
+
+def test_custom_delimiter_semicolon():
+    assert add("//;\n1;2") == 3
