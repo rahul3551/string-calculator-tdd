@@ -7,4 +7,12 @@ def add(numbers):
         numbers = numbers.replace(delimiter, ',')
        
     numbers = numbers.replace("\n", ",")
-    return sum([int(i) for i in numbers.split(',') if i])
+
+    num_list = [int(i) for i in numbers.split(',') if i]
+
+    negatives = [n for n in num_list if n<0]
+    if negatives:
+        raise ValueError(f"negative numbers not allowed: {','.join(map(str, negatives))}")
+    return sum(num_list)
+
+# print(add('-2,-3'))
