@@ -7,3 +7,5 @@ def test_empty_string_returns_0():
 def test_single_number_returns_itself():
     assert add("5") == 5
 
+def test_two_numbers_comma_separated():
+    assert add("1,2") == 3
